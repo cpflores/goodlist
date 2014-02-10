@@ -1,4 +1,6 @@
 Goodlist::Application.routes.draw do
+  resources :places
+
   get "about" => 'pages#about'
 
   root 'pages#welcome'
