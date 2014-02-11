@@ -4,12 +4,16 @@
  	</h2>
 </p>
 
-<p class="text_muted">
-	<small>Posted at <%= place.created_at.to_formatted_s(:long) %></small>
-</p>
+<p>
+	<%= image_tag place.content, style: "width: 100%" %>
+</p>	
 
 <p>
   <%= simple_format place.content %>
+</p>
+
+<p class="text_muted">
+	<small>Posted at <%= place.created_at.to_formatted_s(:long) %></small>
 </p>
 
 <%= link_to 'Edit', edit_place_path(place) %> |
