@@ -1,9 +1,13 @@
-<h1>Shop socially smart</h1>
-<p class="lead">Check out the places below.</p>
+<div class="jumbotron">
+	<h1>Shop socially smart</h1>
+	<p class="lead">Check out the places below.</p>
+</div>
 
-<% @places.each do |place| %>
-	<%= render 'places/place', place: place %>
-	<br>
-	<br>
-	<br>
-<% end %>
+<div class="container">
+	<% @places.each do |place| %>
+		<%= render 'places/place', place: place %>
+		<br>
+		<br>
+		<br>
+	<% end %>
+</div>
