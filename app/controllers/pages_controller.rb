@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def welcome
+  	@places = Place.all
   end
 end
