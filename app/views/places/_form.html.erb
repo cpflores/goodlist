@@ -17,6 +17,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :Image_Link %><br>
+    <%= f.text_field :image, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :Kind %><br>
     <%= f.select :kind, ["Eat", "Drink", "Shop"], {}, class: 'form-control' %>
   </div>

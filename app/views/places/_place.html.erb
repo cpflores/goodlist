@@ -1,11 +1,11 @@
-<p>
+<p>  <%= place.kind %> // 
 	<h2> 
  		<%= link_to place.title, place %>
  	</h2>
 </p>
 
 <p>
-	<%= image_tag place.content, style: "width: 100%" %>
+	<%= image_tag place.image, style: "width: 100%" %>
 </p>	
 
 <p>
@@ -16,5 +16,3 @@
 	<small>Posted at <%= place.created_at.to_formatted_s(:long) %></small>
 </p>
 
-<%= link_to 'Edit', edit_place_path(place) %> |
-<%= link_to 'Back', places_path %>
