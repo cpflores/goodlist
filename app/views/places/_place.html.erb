@@ -1,15 +1,15 @@
-<p>  <%= place.kind %> // 
-	<h2> 
- 		<%= link_to place.title, place %>
- 	</h2>
+<p>  
+	<%= place.kind %> // 
 </p>
-
+<p>	
+	<h2><%= link_to place.title, place %> <%= simple_format place.content %></h2>
+</p>
 <p>
 	<%= image_tag place.image, style: "width: 100%" %>
 </p>	
 
 <p>
-  <%= simple_format place.content %>
+  
 </p>
 
 <p class="text_muted">
