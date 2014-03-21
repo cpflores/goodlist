@@ -6,10 +6,20 @@
 	</p>
 <% end %>
 
-<%= render 'place', place: @place %>
-
-
+	<p>  
+		<%= @place.kind %> // 
+	</p>
+	<p class="text_muted">
+		<small>Posted at <%= @place.created_at.to_formatted_s(:long) %></small>
+	</p>
+	<p>	
+		<h2><%= link_to @place.title, @place %> <%= simple_format @place.content %></h2>
+	</p>
+	<p><%= image_tag @place.image, style: "width: 100%" %></p>	
+	
+	
+<p>
 <%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
-
+<%= link_to 'Back', root_path %>
+</p>
 </div>
