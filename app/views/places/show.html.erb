@@ -12,9 +12,9 @@
 	<p class="text_muted">
 		<small>Posted at <%= @place.created_at.to_formatted_s(:long) %></small>
 	</p>
-	<p>	
-		<h2><%= link_to @place.title, @place %> <%= simple_format @place.content %></h2>
-	</p>
+	<p><h2><%= link_to @place.title, @place %></h2></p> 
+	<p><h3><%= simple_format @place.content %></h3></p>
+	
 	<p><%= image_tag @place.image, style: "width: 100%" %></p>	
 	
 	
