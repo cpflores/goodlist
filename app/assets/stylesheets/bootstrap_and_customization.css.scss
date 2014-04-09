@@ -14,6 +14,10 @@ $jumbotron-default-font-color:              white;
 
 @import "bootstrap";
 
+.navbar {
+	border: none;
+}
+
 h1 {
 	font-family: 'Merriweather', serif;
 }
