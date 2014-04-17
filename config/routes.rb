@@ -1,4 +1,5 @@
 Goodlist::Application.routes.draw do
+  devise_for :users
   resources :places
 
   get "about" => 'pages#about'
