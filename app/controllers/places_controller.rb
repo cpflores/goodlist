@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   # GET /places
   # GET /places.json
@@ -60,6 +60,18 @@ class PlacesController < ApplicationController
       format.html { redirect_to places_url }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @place = Place.find(params[:id])
+    @place.votes.create
+    redirect_to(root_path)
+  end
+
+  def downvote
+    @place = Place.find(params[:id])
+    @place.votes.first.destroy
+    redirect_to(root_path)
   end
 
   private

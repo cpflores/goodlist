@@ -1,6 +1,11 @@
 Goodlist::Application.routes.draw do
   devise_for :users
-  resources :places
+  resources :places do
+    member do
+      post 'upvote'
+      post 'downvote'
+    end
+  end
 
   get "about" => 'pages#about'
 

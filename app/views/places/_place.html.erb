@@ -2,6 +2,9 @@
 <div class="row">
 	<div class="col-md-5">
 		<%= image_tag place.image, style: "width: 100%" %>	
+		<%= button_to '+1', upvote_place_path(place), method: :post %>
+		<%= pluralize(place.votes.count, "♥") %>
+		<%= button_to '-1', downvote_place_path(place), method: :post %>
 	</div>
 	<div class="col-md-7">
 	<p>  
