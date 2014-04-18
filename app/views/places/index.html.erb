@@ -1,28 +1,24 @@
 <div class="container">
 
 <div class="page-header">
-  <h1>Goodlist Places</h1>
+  <h1>Goodlist Top Places</h1>
 </div>
 
 <table class="table">
   <thead>
     <tr>
+      <th>Votes</th>
       <th>Place</th>
       <th>Why is it Good?</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @places.each do |place| %>
       <tr>
-        <td><%= place.title %></td>
+        <td><%= place.votes.count %></td>
+        <td><%= link_to place.title, place %></td>
         <td><%= truncate(place.content, length: 100) %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

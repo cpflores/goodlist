@@ -20,6 +20,9 @@
 	
 <p>
 <%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Delete', @place, method: :delete, data: { confirm: 'Are you sure?' } %> 
+</p>
+<p>
 <%= link_to 'Back', root_path %>
 </p>
 </div>
