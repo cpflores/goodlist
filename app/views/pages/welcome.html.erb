@@ -1,7 +1,14 @@
 <div class="jumbotron">
 	<div class="container">
 		<h1>Shop socially smart</h1>
-		<p class="lead">Check out the places below</p>
+		<p class="lead">Post your favorite places to shop, eat, and drink. Share the love with the businesses to let them know you care.</p>
+		<% if user_signed_in? %>
+		<% else %>
+			<p>
+			<%= link_to "Sign in", new_user_session_path, class: "btn btn-default btn-lg" %>
+			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+			</p>
+		<% end %>	
 	</div>
 </div>
 
@@ -12,4 +19,4 @@
 		<br>
 		<br>
 	<% end %>
-</div>
+</div>`
