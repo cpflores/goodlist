@@ -39,4 +39,23 @@ h2 {
 
 .btn {
 	border-radius: 0;
+	border-color: #fff;
+}
+
+.btn.btn-default.btn-lg {
+	color: #2c3e50;
+}
+
+.btn-outline-inverse {
+	color: #fff;
+	background-color: transparent;
+}
+
+.btn-outline-inverse:hover {
+	color: #2c3e50;
+	background-color: white;
+}
+
+.vote-count {
+	color: #2c3e50;
 }

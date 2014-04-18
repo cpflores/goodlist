@@ -1,14 +1,15 @@
 
 <div class="row">
+	<div class="col-md-1">
+		<p><%= button_to '+1', upvote_place_path(place), method: :post, class: "btn btn-primary btn-lg" %></p>
+		<h3 class="vote-count"><%= pluralize(place.votes.count, "♥") %></h3>
+		<p><%= button_to '-1', downvote_place_path(place), method: :post, class: "btn btn-primary btn-lg" %></p>
+	</div>
 	<div class="col-md-5">
 		<%= image_tag place.image, style: "width: 100%" %>	
-		<p>
-			<%= button_to '+1', upvote_place_path(place), method: :post, class: "btn btn-primary btn-lg" %>
-			<%= pluralize(place.votes.count, "♥") %>
-			<%= button_to '-1', downvote_place_path(place), method: :post, class: "btn btn-primary btn-lg" %>
-		</p>
+		
 	</div>
-	<div class="col-md-7">
+	<div class="col-md-6">
 	<p>  
 		<%= place.kind %> // 
 	</p>
